@@ -2,8 +2,17 @@
 
 cd /Users/arnaud/GITROOT/GoFigure2
 
-#the git binaries directory :
+#setup environment :
+
 GITBIN=/opt/local/bin
+SVNBIN=$GITBIN
+SSHBIN=/usr/bin
+#the ssh keys needed for Git connection :
+echo `$SSHBIN/ssh-add /Users/arnaud/.ssh`
+
+
+
+#update the repository :
 
 echo "  Fetch from svn"
 echo `$GITBIN/git svn fetch`
@@ -31,7 +40,7 @@ echo `$GITBIN/git push origin develop`
 ## if we wanted to be correctly synchronized :
 ##for BRANCHES in `$GITBIN/git branch -r | grep -v "@" | grep -v "tag" | grep -v "trunk"`; do
 #we list the braches currently present on the svn server :
-for SVNBRANCHES in `svn list http://gofigure2.svn.sourceforge.net/svnroot/gofigure2/branches | sed 's_\/__'`; do
+for SVNBRANCHES in `$SVNBIN/svn list http://gofigure2.svn.sourceforge.net/svnroot/gofigure2/branches | sed 's_\/__'`; do
 
   #which branch are we dealing with :
   echo "  $SVNBRANCHES : fetching from svn"
