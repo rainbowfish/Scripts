@@ -1,0 +1,11 @@
+
+
+This repository contains the scripts for the MegasonLab Rainbowfish server.
+
+It is possible to setup an auto checkout from rainbowfish 
+to update the scripts.
+
+Here is a list of the scripts running on Rainbowfish :
+  *gitbash.sh : this script fetches Gofigure2 svn repository 
+  and update Github repository, according to a git workflow.
+  branches and tag conversion has been taken care of.
