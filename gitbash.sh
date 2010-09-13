@@ -3,12 +3,12 @@
 
 
 # cd /Users/arnaud/GITROOT/GoFigure2
-cd #1
+cd $1
 
 #setup environment :
 
 #GITBIN=/opt/local/bin
-GITBIN #2
+GITBIN $2
 SVNBIN=$GITBIN
 SSHBIN=$GITBIN
 
